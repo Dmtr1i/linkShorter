@@ -1,0 +1,44 @@
+.mainDiv {
+    position:absolute;
+    background-color: aqua;
+    width: 750px;
+    height: 500px;
+    border-radius: 25px;
+    left: calc(50% - 375px);
+    top: calc(50% - 250px);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.inputLink {
+    width: 700px;
+    height: 30px;
+    margin: 0 0 0 25px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.submitButton {
+    height: 50px;
+    width: 200px;
+    margin: 20px 0 0 275px;
+    border: none;
+    transition: .7s;
+    border-radius: 5px;
+}
+
+.submitButton:hover {
+    background-color: green;
+    transition: .7s;
+}
+
+.resultLink {
+    width: 700px;
+    height: 30px;
+    margin: 20px 0 0 25px;
+    font-size: 24px;
+    text-align: center;
+}
