@@ -1,0 +1,1 @@
+document.location.href = document.getElementById('resultLink').textContent;

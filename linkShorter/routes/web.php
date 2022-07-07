@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\LinkController::class, 'home'])->name('home');
+
+Route::post('/short', [App\Http\Controllers\LinkController::class, 'short'])->name('short');
+
+Route::post('/unknown', [App\Http\Controllers\LinkController::class, 'getLink'])->name('getLink');

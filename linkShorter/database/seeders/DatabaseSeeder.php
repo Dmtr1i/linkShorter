@@ -13,8 +13,10 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+    /*
     public function run()
     {
         Link::factory(10)->create();
     }
+    */
 }

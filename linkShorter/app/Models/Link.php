@@ -13,4 +13,6 @@ class Link extends Model
         "old_link",
         "short_link",
     ];
+
+    protected $primaryKey = "id";
 }
