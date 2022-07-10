@@ -17,6 +17,7 @@
                 @enderror
                 <button id="submitButton" class="submitButton" type="submit">submit</button>
             </form>
+            <h2 class="hide" id="progress">We shorten your link!</h2>
             @if($short_link)
                 <div class="resultLink" id="resultLink">Your link is {{ $short_link }}</div>
                 <button class="submitButton" id="copyLink">Copy link</button>

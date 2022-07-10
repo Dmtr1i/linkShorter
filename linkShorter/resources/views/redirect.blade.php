@@ -8,6 +8,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    <div class="mainDiv">
+        <h1 class="title">redirect to the specified link</h1>
+    </div>
     @if($short_link)
         <div class="hide" id="resultLink">{{ $short_link->value("old_link") }}</div>
     @endif
