@@ -18,6 +18,7 @@ class LinkController extends Controller
         $data = $request->validate([
             'userLink' => ['required', 'url'],
         ]);
+        
         $check = Link::get()
                     ->where('old_link', $data['userLink']
         );
@@ -34,7 +35,7 @@ class LinkController extends Controller
         $count = 5;
         while($individuality_check)
         {
-            $shortLink = 'http://127.0.0.1:8000/';
+            $shortLink = 'http://localhost:8098/';
             for ($i = 0; $i < $num; $i++) {
                 $shortLink .= $characters[rand(0, strlen($characters) - 1)];
             }
@@ -44,6 +45,7 @@ class LinkController extends Controller
                 $num += 1;
                 $count = 5;
             }
+            $individuality_check = false;
         }
         
         $link = Link::create([

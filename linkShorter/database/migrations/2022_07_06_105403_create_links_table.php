@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('links', function (Blueprint $table) {
-            $table->id();
+            //$table->id();
             $table->string("old_link");
             $table->string("short_link");
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

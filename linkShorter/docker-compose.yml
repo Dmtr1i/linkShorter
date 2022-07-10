@@ -1,0 +1,36 @@
+version: "3.3"
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Nginx.Dockerfile
+    ports:
+    - 8098:80
+    links:
+    - fpm
+    volumes:
+    - ./:/var/www/linkShorter
+  fpm:
+    build:
+      context: .
+      dockerfile: docker/Fpm.dockerfile
+    volumes:
+    - ./:/var/www/linkShorter
+    links:
+    - pgsql
+  pgsql:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "linkShortener"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+    - "5432:5432"
+    volumes:
+      - /data:/var/lib/pgsql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

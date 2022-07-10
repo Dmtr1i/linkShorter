@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Link shortener</title>
-        <link rel="stylesheet" href="../../public/build/assets/app.f5f3eb49.css"/>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>

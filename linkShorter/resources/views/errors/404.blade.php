@@ -4,12 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Get link</title>
-        <link rel="stylesheet" href="../../public/build/assets/app.f5f3eb49.css"/>
-        @vite(['resources/css/app.css', 'resources/js/404.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
         <form action="{{route('getLink')}}" method="Post" id="form404">
+            @csrf
             <input name="url" class="hide" id="form_value"></input>
         </form>
+        <script>
+            document.getElementById('form_value').value = document.URL;
+            document.getElementById('form404').submit();
+        </script>
     </body>
 </html>
