@@ -28,7 +28,7 @@ services:
     ports:
     - "5432:5432"
     volumes:
-      - /data:/var/lib/pgsql
+      - /db_data:/var/lib/postgresql/data
   adminer:
     image: adminer
     restart: always

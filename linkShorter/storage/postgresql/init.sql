@@ -1,8 +1,8 @@
-create database if not exist linkShortener;
-use linkShortener;
-create table if not exists links
-(
-    id int identity(1,1),
-    old_link varchar() not null,
-    short_link varchar() not null
+CREATE TABLE "links" (
+  "id" serial NOT NULL,
+  PRIMARY KEY ("id"),
+  "old_link" text NOT NULL,
+  "short_link" text NOT NULL,
+  "updated_at" timestamp NOT NULL,
+  "created_at" timestamp NOT NULL
 );
