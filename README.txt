@@ -8,3 +8,7 @@ CREATE TABLE "links" (
   "updated_at" timestamp NOT NULL,
   "created_at" timestamp NOT NULL
 );
+
+Далее, в командной строке выполнить docker-compose up
+
+После этого проект находится в полной работоспособности
